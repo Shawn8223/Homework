@@ -2,6 +2,7 @@
 #include <ctime>
 using namespace std;
 
+// Function to generate a random number between 1 and 3
 int random()
 {
 	return rand() % 3 + 1;
@@ -9,6 +10,7 @@ int random()
 
 int main(void)
 {
+	//Avoid the random number always be the same
 	srand(time(NULL));
 
 	const int actualPIN = 12573;
