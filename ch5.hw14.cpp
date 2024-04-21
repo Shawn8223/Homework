@@ -5,6 +5,7 @@ using namespace std;
 const int num_reviewer = 4;
 const int num_movies = 6;
 
+//Calculate who is the most closet
 double Cartesian_distance(int arr1[], int arr2[], int n)
 {
 	double	distance = 0;
@@ -32,6 +33,7 @@ int main(void)
 
 	int userRating[num_movies] = { 0,0,0,0,0,0 };
 
+	//Get the information about the three movies which someone rates for
 	for (int i = 0; i < 3; i++)
 	{
 		int movieID = 0;
@@ -48,6 +50,7 @@ int main(void)
 	double minDistance = 9999;
 	int closetReviewer = -1;
 
+	//Compare who is the most closet
 	for (int j = 0; j < num_reviewer; j++)
 	{
 		distance = Cartesian_distance(MoviesRates[j], userRating, num_movies);
@@ -59,6 +62,9 @@ int main(void)
 	}
 
 	cout << "\nPredict rating. Based on the closetReviewer:" << closetReviewer << endl;
+
+	//If the movies didn't be rated.
+	//Predict the rating. 
 	for (int k = 0; k < num_movies; k++)
 	{
 		if (userRating[k] == 0)

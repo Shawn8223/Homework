@@ -1,3 +1,5 @@
+//Convert To MPH
+
 #include <iostream>
 #include <iomanip>
 using namespace std;
@@ -12,7 +14,7 @@ int main(void)
 	double mph = 0;
 
 	cout << "Enter your speed in terms of a pace\n"
-		<< " (minutes and seconds per mile, such as¡u5:30 mile¡v\n"
+		<< " (minutes and seconds per mile, such asÂ¡u5:30 mileÂ¡v\n"
 		<< " or in terms of kilometers per hour(kph).\n";
 
 	cin >> minutes >> seconds;
@@ -24,11 +26,13 @@ int main(void)
 
 }
 
+//minutes and seconds per mile to mph
 double convertToMPH(int minutes, int seconds)
 {
 	return 3600.0 / (minutes * 60.0 + seconds);
 }
 
+//kph to mph
 double convertToMPH(double kilometers)
 {
 	return kilometers / 1.61;

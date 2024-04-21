@@ -21,11 +21,10 @@ int main(void)
         else
         {
             cout << "Wrong grades input." << endl;
-            //grade = -1;
         }
-    } while (grade != -1);
+    } while (grade != -1);   // Continue loop until user enters -1 to stop input
     
-
+    // Display the count of each grade
     for (int i = 0; i < num_Student; i++)
     {
         cout << gradeCount[i] << " grade(s) of " << i << endl;

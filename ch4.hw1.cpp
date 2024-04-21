@@ -1,3 +1,5 @@
+//Converts from 24-hour notation to 12-hour notation.
+
 #include <iostream>
 using namespace std;
 
